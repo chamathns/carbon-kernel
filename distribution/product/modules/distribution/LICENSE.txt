@@ -80,7 +80,6 @@ tiles-jsp_2.0.5.wso2v2.jar                                                      
 commons-beanutils-1.9.4.jar                                                                         jarinbundle    apache2
 commons-collections-3.2.2.jar                                                                       jarinbundle    apache2
 commons-digester-1.8.jar                                                                            jarinbundle    apache2
-abdera_1.0.0.wso2v3.jar                                                                             bundle         apache2
 org.ops4j.pax.logging.pax-logging-log4j2_2.1.0.wso2v4.jar                                           bundle         apache2
 org.eclipse.equinox.console_1.3.300.v20190516-1504.jar                                              bundle         epl1
 org.eclipse.equinox.p2.engine_2.3.0.v20140506-1720.jar                                              bundle         epl1

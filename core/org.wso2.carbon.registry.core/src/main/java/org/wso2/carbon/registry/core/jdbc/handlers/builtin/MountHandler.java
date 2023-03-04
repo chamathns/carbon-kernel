@@ -22,7 +22,6 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.osgi.util.tracker.ServiceTracker;
 import org.wso2.carbon.CarbonConstants;
-import org.wso2.carbon.registry.app.RemoteRegistry;
 import org.wso2.carbon.registry.core.*;
 import org.wso2.carbon.registry.core.Collection;
 import org.wso2.carbon.registry.core.config.RegistryContext;
@@ -162,54 +161,6 @@ public class MountHandler extends Handler {
                 isHandlerRegistered = true;
             } catch (RegistryException e) {
                 log.error("Unable to add mount entry into Registry", e);
-            }
-        }
-        if (remote) {
-            if (registryProvider == null && registryType != null) {
-                BundleContext bundleContext = RegistryCoreServiceComponent.getBundleContext();
-                if (bundleContext != null) {
-                    ServiceTracker tracker =
-                            new ServiceTracker(bundleContext, RegistryProvider.class.getName(),
-                                    null);
-                    tracker.open();
-                    ServiceReference[] references = tracker.getServiceReferences();
-                    if (references != null) {
-                        for (ServiceReference reference : references) {
-                            if (registryType.equals(reference.getProperty("type"))) {
-                                registryProvider = (RegistryProvider) tracker.getService(reference);
-                                break;
-                            }
-                        }
-                    }
-                    tracker.close();
-                }
-            }
-
-            if (registryProvider != null) {
-                return registryProvider.getRegistry(this.conURL, this.userName, this.password);
-            }
-
-            RegistryUtils.setTrustStoreSystemProperties();
-            try {
-                if (baseContext != null) {
-                    Registry registry = new RemoteRegistry(this.conURL, this.userName, this.password) {
-
-                        public RegistryContext getRegistryContext() {
-                            RegistryContext context = RegistryContext.getCloneContext();
-                            context.setReadOnly(readOnly);
-                            context.setCacheEnabled(cacheEnabled);
-                            return context;
-                        }
-                    };
-                    return new UserRegistry(this.userName, CurrentSession.getTenantId(), registry,
-                            baseContext.getRealmService(), baseContext.getRegistryRoot());
-                }
-                return new RemoteRegistry(this.conURL, this.userName, this.password);
-
-            } catch (MalformedURLException e) {
-                String msg = "Unable to connect to the remote registry";
-                log.error(msg, e);
-                throw new RegistryException(msg, e);
             }
         }
         if (registryService == null) {

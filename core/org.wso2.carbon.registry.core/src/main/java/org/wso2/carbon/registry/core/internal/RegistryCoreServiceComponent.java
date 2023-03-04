@@ -32,8 +32,6 @@ import org.wso2.carbon.CarbonConstants;
 import org.wso2.carbon.base.ServerConfiguration;
 import org.wso2.carbon.caching.impl.CacheInvalidator;
 import org.wso2.carbon.context.PrivilegedCarbonContext;
-import org.wso2.carbon.registry.app.RemoteRegistryService;
-import org.wso2.carbon.registry.app.Utils;
 import org.wso2.carbon.registry.core.CollectionImpl;
 import org.wso2.carbon.registry.core.Registry;
 import org.wso2.carbon.registry.core.RegistryConstants;
@@ -511,16 +509,8 @@ public class RegistryCoreServiceComponent {
 
         RegistryService registryService;
         String registryRoot;
-        if (org.wso2.carbon.registry.core.config.RegistryConfiguration.REMOTE_REGISTRY
-                .equals(RegistryCoreServiceComponent.registryConfig.getRegistryType())) {
-            registryService = getRemoteRegistryService(RegistryCoreServiceComponent.registryConfig);
-            registryRoot = RegistryCoreServiceComponent.registryConfig.getValue(
-                    org.wso2.carbon.registry.core.config.RegistryConfiguration.REGISTRY_ROOT);
-        } else {
-            registryService = getEmbeddedRegistryService();
-            Utils.setEmbeddedRegistry((EmbeddedRegistryService) registryService);
-            registryRoot = RegistryContext.getBaseInstance().getRegistryRoot();
-        }
+        registryService = getEmbeddedRegistryService();
+        registryRoot = RegistryContext.getBaseInstance().getRegistryRoot();
 
         UserRegistry systemRegistry = registryService.getRegistry(CarbonConstants.REGISTRY_SYSTEM_USERNAME);
         RegistryContext registryContext = systemRegistry.getRegistryContext();
@@ -596,24 +586,6 @@ public class RegistryCoreServiceComponent {
             }
         }
         return new EmbeddedRegistryService(registryContext);
-    }
-
-    // Gets registry service for the Remote Registry
-    @SuppressWarnings("deprecation")
-    private RegistryService getRemoteRegistryService(
-            org.wso2.carbon.registry.core.config.RegistryConfiguration regConfig) throws Exception {
-
-        String url =
-                regConfig.getValue(org.wso2.carbon.registry.core.config.RegistryConfiguration.URL);
-        String username = regConfig
-                .getValue(org.wso2.carbon.registry.core.config.RegistryConfiguration.USERNAME);
-        String password = regConfig
-                .getValue(org.wso2.carbon.registry.core.config.RegistryConfiguration.PASSWORD);
-        String chroot = regConfig
-                .getValue(org.wso2.carbon.registry.core.config.RegistryConfiguration.REGISTRY_ROOT);
-
-        return new RemoteRegistryService(url, username,
-                password, dataHolder.getRealmService(), chroot);
     }
 
     // Gets registry configuration instance.

@@ -123,7 +123,6 @@
                             org.wso2.carbon.caching.impl.eviction.*
                         </Private-Package>
                         <Import-Package>
-                            javax.transaction.*,
                             *;resolution:=optional
                         </Import-Package>
                     </instructions>

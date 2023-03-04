@@ -45,7 +45,6 @@
                             !javax.servlet,
                             !javax.servlet.http,
                             org.wso2.carbon.registry.core.*;version=1.0.1,
-                            org.wso2.carbon.registry.app.*;version=1.0.1,
                             org.wso2.carbon.registry.synchronization.*;version=1.0.1,
                         </Export-Package>
                         <Import-Package>
@@ -55,7 +54,6 @@
                             org.wso2.carbon.utils.*,
                             !javax.xml.namespace,
                             javax.activation.*;version="[0.0.0, 1.0.0)",
-                            org.apache.abdera.*; version="${imp.pkg.version.abdera}",
                             javax.xml.namespace; version=0.0.0,
                             javax.servlet; version="${imp.pkg.version.javax.servlet}",
                             javax.servlet.http; version="${imp.pkg.version.javax.servlet}",
@@ -71,9 +69,6 @@
                         <Embed-Dependency>
                             acegi-security;scope=compile|runtime;inline=false
                         </Embed-Dependency>
-                        <Include-Resource>
-                            META-INF/services/org.apache.abdera.factory.ExtensionFactory=src/main/resources/META-INF/services/org.apache.abdera.factory.ExtensionFactory
-                        </Include-Resource>
                     </instructions>
                 </configuration>
             </plugin>
@@ -453,10 +448,6 @@
         <dependency>
             <groupId>org.compass-project.wso2</groupId>
             <artifactId>compass</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.abdera.wso2</groupId>
-            <artifactId>abdera</artifactId>
         </dependency>
         <dependency>
             <groupId>org.wso2.org.ops4j.pax.logging</groupId>

@@ -409,12 +409,6 @@
         <!-- H2 Database Engine -->
         <version.h2.engine>2.1.210.wso2v1</version.h2.engine>
 
-        <!-- Abdera -->
-        <version.abdera>1.0-wso2v2</version.abdera>
-        <orbit.version.abdera>1.0.0.wso2v3</orbit.version.abdera>
-        <exp.pkg.version.abdera>1.0.0.wso2v3</exp.pkg.version.abdera>
-        <imp.pkg.version.abdera>[1.0.0.wso2v3, 2)</imp.pkg.version.abdera>
-
         <!-- Apache Geronimo -->
         <version.geronimo.saaj.spec>1.0.1.wso2v2</version.geronimo.saaj.spec>
         <version.geronimo.jms.spec>1.1.1.wso2v1</version.geronimo.jms.spec>
@@ -1105,33 +1099,6 @@
                 <groupId>org.apache.ant.wso2</groupId>
                 <artifactId>ant</artifactId>
                 <version>${version.ant}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.abdera.wso2</groupId>
-                <artifactId>abdera</artifactId>
-                <version>${orbit.version.abdera}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.abdera</groupId>
-                        <artifactId>abdera-client</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.apache.abdera</groupId>
-                        <artifactId>abdera-core</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.apache.abdera</groupId>
-                        <artifactId>abdera-parser</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.apache.abdera</groupId>
-                        <artifactId>abdera-server</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.apache.abdera</groupId>
-                        <artifactId>abdera-i18n</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.wso2.orbit.org.apache.xmlbeans</groupId>
