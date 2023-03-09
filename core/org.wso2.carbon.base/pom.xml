@@ -48,6 +48,7 @@
                             org.wso2.carbon.base.*
                         </Export-Package>
                         <Import-Package>
+                            javax.activation.*;version="[0.0.0, 2.0.0)",
                             javax.servlet; version="${imp.pkg.version.javax.servlet}",
                             javax.servlet.http; version="${imp.pkg.version.javax.servlet}",
                             org.wso2.securevault.*,
@@ -118,6 +119,10 @@
             <artifactId>javax.servlet-api</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.sun.activation</groupId>
+            <artifactId>javax.activation</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.wso2.orbit.xerces</groupId>
             <artifactId>xercesImpl</artifactId>
             <scope>provided</scope>
@@ -153,6 +158,11 @@
         <dependency>
             <groupId>xml-apis</groupId>
             <artifactId>xml-apis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.platform</groupId>
+            <artifactId>org.eclipse.osgi.services</artifactId>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 </project>

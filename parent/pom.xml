@@ -386,7 +386,7 @@
 
         <!-- Servlet API -->
         <exp.pkg.version.javax.servlet>2.6.0</exp.pkg.version.javax.servlet>
-        <imp.pkg.version.javax.servlet>[2.6.0, 3.0.0)</imp.pkg.version.javax.servlet>
+        <imp.pkg.version.javax.servlet>[2.6.0, 5.0.0)</imp.pkg.version.javax.servlet>
 
         <!-- JSP API -->
         <exp.pkg.version.javax.servlet.jsp>2.2.0</exp.pkg.version.javax.servlet.jsp>
@@ -1057,11 +1057,11 @@
                 <artifactId>jakarta.xml.bind-api</artifactId>
                 <version>4.0.0</version>
             </dependency>
-            <dependency>
-                <groupId>jakarta.activation</groupId>
-                <artifactId>jakarta.activation-api</artifactId>
-                <version>2.1.0</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>jakarta.activation</groupId>-->
+<!--                <artifactId>jakarta.activation-api</artifactId>-->
+<!--                <version>2.1.0</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>com.sun.xml.bind</groupId>
                 <artifactId>jaxb-impl</artifactId>
@@ -1327,11 +1327,11 @@
                 <artifactId>wrapper</artifactId>
                 <version>${version.wrapper}</version>
             </dependency>
-            <dependency>
-                <groupId>javax.activation</groupId>
-                <artifactId>activation</artifactId>
-                <version>${version.activation}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>javax.activation</groupId>-->
+<!--                <artifactId>activation</artifactId>-->
+<!--                <version>${version.activation}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>org.apache.geronimo.specs</groupId>
                 <artifactId>geronimo-jaxws_2.2_spec</artifactId>
