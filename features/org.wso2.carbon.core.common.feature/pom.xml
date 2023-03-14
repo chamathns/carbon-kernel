@@ -85,7 +85,7 @@
                                 <bundleDef>wsdl4j.wso2:wsdl4j:${orbit.version.wsdl4j}</bundleDef>
                                 <bundleDef>org.apache.ws.commons.schema.wso2:XmlSchema:${version.XmlSchema}</bundleDef>
                                 <bundleDef>org.wso2.orbit.commons-codec:commons-codec:${version.commons.codec}</bundleDef>
-                                <bundleDef>annogen.wso2:annogen:${version.annogen}</bundleDef>
+<!--                                <bundleDef>annogen.wso2:annogen:${version.annogen}</bundleDef>-->
                                 <bundleDef>
                                     backport-util-concurrent.wso2:backport-util-concurrent:${version.backport.util.concurrent}
                                 </bundleDef>
@@ -134,8 +134,6 @@
                                 </bundleDef>
                                 <bundleDef>org.wso2.carbon:org.wso2.carbon.registry.core:${carbon.kernel.version}
                                 </bundleDef>
-                                <bundleDef>org.wso2.carbon:org.wso2.carbon.feature.mgt.core:${carbon.kernel.version}
-                                </bundleDef>
                                 <bundleDef>
                                     org.wso2.carbon:org.wso2.carbon.authenticator.proxy:${carbon.kernel.version}
                                 </bundleDef>
@@ -170,8 +168,8 @@
                                 </bundleDef>
                                 <bundleDef>org.wso2.orbit.sun.xml.bind:jaxb:${version.org.wso2.orbit.javax.xml.bind.jaxb}</bundleDef>
                                 <bundleDef>com.sun.activation:javax.activation:1.2.0</bundleDef>
-                                <bundleDef>com.sun.xml.bind:jaxb-impl:4.0.0</bundleDef>
-                                <bundleDef>jakarta.xml.bind:jakarta.xml.bind-api:4.0.0</bundleDef>
+<!--                                <bundleDef>com.sun.xml.bind:jaxb-impl:4.0.0</bundleDef>-->
+<!--                                <bundleDef>jakarta.xml.bind:jakarta.xml.bind-api:4.0.0</bundleDef>-->
                                 <bundleDef>javax.xml.soap:javax.xml.soap-api:1.4.0</bundleDef>
 <!--                                <bundleDef>jakarta.activation:jakarta.activation-api:2.1.0</bundleDef>-->
                             </bundles>

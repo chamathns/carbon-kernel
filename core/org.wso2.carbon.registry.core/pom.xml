@@ -65,6 +65,10 @@
                             org.wso2.carbon.caching.impl.*,
                             *;resolution:=optional
                         </Import-Package>
+                        <Provide-Capability>
+                            osgi.service;objectClass=org.wso2.carbon.registry.core.service.RegistryService,
+                            osgi.service;objectClass=org.wso2.carbon.registry.core.service.TenantRegistryLoader
+                        </Provide-Capability>
                         <DynamicImport-Package>*</DynamicImport-Package>
                         <Embed-Dependency>
                             acegi-security;scope=compile|runtime;inline=false
