@@ -42,9 +42,9 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Fragment-Host>system.bundle; extension:=framework</Fragment-Host>
                         <Export-Package>
-                            javax.xml.stream; version="1.0.1",
-                            javax.xml.stream.events; version="1.0.1",
-                            javax.xml.stream.util; version="1.0.1"
+                            javax.xml.stream; version="0.0.0",
+                            javax.xml.stream.events; version="0.0.0",
+                            javax.xml.stream.util; version="0.0.0"
                         </Export-Package>
                         <Import-Package>!*</Import-Package>
                     </instructions>

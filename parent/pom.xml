@@ -385,12 +385,12 @@
         <xmlsec.version>1.4.2-patched</xmlsec.version>
 
         <!-- Servlet API -->
-        <exp.pkg.version.javax.servlet>2.6.0</exp.pkg.version.javax.servlet>
+        <exp.pkg.version.javax.servlet>4.0.1</exp.pkg.version.javax.servlet>
         <imp.pkg.version.javax.servlet>[2.6.0, 5.0.0)</imp.pkg.version.javax.servlet>
 
         <!-- JSP API -->
-        <exp.pkg.version.javax.servlet.jsp>2.2.0</exp.pkg.version.javax.servlet.jsp>
-        <imp.pkg.version.javax.servlet.jsp>[2.2.0, 2.3.0)</imp.pkg.version.javax.servlet.jsp>
+        <exp.pkg.version.javax.servlet.jsp>4.0.1</exp.pkg.version.javax.servlet.jsp>
+        <imp.pkg.version.javax.servlet.jsp>[2.2.0, 5.0.0)</imp.pkg.version.javax.servlet.jsp>
 
         <!-- JSTL -->
         <version.jstl>1.2.1</version.jstl>
@@ -576,7 +576,7 @@
         <wagon.ssh.version>2.1</wagon.ssh.version>
         <version.jaxb.api>2.4.0-b180830.0359</version.jaxb.api>
         <version.jaxb.impl>2.4.0-b180830.0438</version.jaxb.impl>
-        <version.com.sun.istack>3.0.8</version.com.sun.istack>
+        <version.com.sun.istack>4.1.1</version.com.sun.istack>
         <version.org.wso2.orbit.javax.xml.bind.jaxb>2.3.2.wso2v1</version.org.wso2.orbit.javax.xml.bind.jaxb>
         <version.activation>1.1.1</version.activation>
         <version.org.wso2.orbit.com.sun.xml.ws.jaxws>2.3.2.wso2v1</version.org.wso2.orbit.com.sun.xml.ws.jaxws>
@@ -1057,11 +1057,11 @@
                 <artifactId>jakarta.xml.bind-api</artifactId>
                 <version>4.0.0</version>
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>jakarta.activation</groupId>-->
-<!--                <artifactId>jakarta.activation-api</artifactId>-->
-<!--                <version>2.1.0</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>jakarta.activation</groupId>
+                <artifactId>jakarta.activation-api</artifactId>
+                <version>2.1.0</version>
+            </dependency>
             <dependency>
                 <groupId>com.sun.xml.bind</groupId>
                 <artifactId>jaxb-impl</artifactId>
@@ -1999,6 +1999,23 @@
                 <groupId>org.osgi</groupId>
                 <artifactId>org.osgi.service.metatype</artifactId>
                 <version>1.4.1</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.servlet.jsp</groupId>
+                <artifactId>jakarta.servlet.jsp-api</artifactId>
+                <version>3.1.1</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.el</groupId>
+                <artifactId>jakarta.el-api</artifactId>
+                <version>5.0.1</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.servlet</groupId>
+                <artifactId>jakarta.servlet-api</artifactId>
+                <version>6.0.0</version>
                 <scope>provided</scope>
             </dependency>
         </dependencies>

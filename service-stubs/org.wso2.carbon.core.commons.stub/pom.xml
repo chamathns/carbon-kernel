@@ -36,7 +36,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
-                <version>1.1</version>
                 <executions>
                     <execution>
                         <id>source-code-generation</id>
@@ -45,7 +44,7 @@
                             <goal>run</goal>
                         </goals>
                         <configuration>
-                            <tasks>
+                            <target>
                                 <path id="wsdl2java.classpath">
                                     <pathelement location="${settings.localRepository}/org/apache/axis2/wso2/axis2-client/${orbit.version.axis2}/axis2-client-${orbit.version.axis2}.jar" />
                                     <pathelement location="${settings.localRepository}/org/apache/axis2/wso2/axis2/${orbit.version.axis2}/axis2-${orbit.version.axis2}.jar" />
@@ -71,7 +70,7 @@
                                     <arg line="-uri src/main/resources/LoggedUserInfoAdmin.wsdl -u -uw -o target/generated-code -p org.wso2.carbon.core.commons.stub.loggeduserinfo -ns2p http://common.core.carbon.wso2.org/xsd=org.wso2.carbon.core.commons.stub.loggeduserinfo,http://loggeduserinfo.services.core.carbon.wso2.org=org.wso2.carbon.core.commons.stub.loggeduserinfo" />
                                     <classpath refid="wsdl2java.classpath" />
                                 </java>
-                            </tasks>
+                            </target>
                         </configuration>
                     </execution>
                 </executions>

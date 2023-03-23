@@ -328,11 +328,11 @@
                             <goal>run</goal>
                         </goals>
                         <configuration>
-                            <tasks>
+                            <target>
                                 <delete dir="target/archive-tmp" />
                                 <delete dir="target/repository" />
                                 <delete dir="target/site" />
-                            </tasks>
+                            </target>
                         </configuration>
                     </execution>
                 </executions>

@@ -53,6 +53,9 @@
                         <Import-Package>
                             org.wso2.carbon.base.*
                         </Import-Package>
+                        <Provide-Capability>
+                            osgi.service;objectClass=org.wso2.carbon.user.api.UserRealmService
+                        </Provide-Capability>
                     </instructions>
                 </configuration>
             </plugin>

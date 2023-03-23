@@ -57,7 +57,7 @@
                             javax.xml.namespace; version=0.0.0,
                             javax.servlet; version="${imp.pkg.version.javax.servlet}",
                             javax.servlet.http; version="${imp.pkg.version.javax.servlet}",
-                            javax.xml.stream.*; version="1.0.1",
+                            javax.xml.stream.*; version="0.0.0",
                             org.pdfbox.*,
                             org.apache.axiom.*; version="${imp.pkg.version.axiom}",
                             org.apache.lucene.*,

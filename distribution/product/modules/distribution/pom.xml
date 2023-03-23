@@ -92,7 +92,7 @@
                             <goal>run</goal>
                         </goals>
                         <configuration>
-                            <tasks>
+                            <target>
                                 <property name="tempdir" value="target/docs-temp" />
                                 <mkdir dir="${tempdir}" />
                                 <unzip dest="${tempdir}">
@@ -106,14 +106,14 @@
                                 </copy>
                                 <!--<delete file="target/wso2carbon-${carbon.kernel.version}.zip" />-->
                                 <delete dir="${tempdir}" />
-                            </tasks>
+                            </target>
                         </configuration>
                     </execution>
                     <execution>
                         <id>clean_target</id>
                         <phase>install</phase>
                         <configuration>
-                            <tasks>
+                            <target>
                                 <delete dir="target/archive-tmp" />
                                 <delete dir="target/dependency-maven-plugin-markers" />
                                 <delete dir="target/maven-archiver" />
@@ -122,7 +122,7 @@
                                 <delete dir="target/sources" />
                                 <delete dir="target/site" />
                                 <delete dir="src/site" />
-                            </tasks>
+                            </target>
                         </configuration>
                         <goals>
                             <goal>run</goal>

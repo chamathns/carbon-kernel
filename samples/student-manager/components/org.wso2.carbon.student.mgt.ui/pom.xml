@@ -44,7 +44,7 @@
                             <goal>run</goal>
                         </goals>
                         <configuration>
-                            <tasks>
+                            <target>
                                 <path id="wsdl2java.classpath">
                                     <pathelement location="${settings.localRepository}/org/apache/axis2/wso2/axis2-client/${axis2.client.osgi.version}/axis2-client-${axis2.client.osgi.version}.jar" />
                                     <pathelement location="${settings.localRepository}/org/apache/axis2/wso2/axis2/${orbit.version.axis2}/axis2-${orbit.version.axis2}.jar" />
@@ -55,7 +55,7 @@
                                     <classpath refid="wsdl2java.classpath" />
                                     <arg line="-uri src/main/resources/studentManager.wsdl -u -uw -o target/generated-code -p org.wso2.carbon.student.mgt.ui -ns2p http://org.apache.axis2/xsd=org.wso2.carbon.student.mgt.ui.types.axis2,http://mgt.student.carbon.wso2.org=org.wso2.carbon.student.mgt.ui, http://data.mgt.student.carbon.wso2.org/xsd=org.wso2.carbon.student.mgt.ui.types.data" />
                                 </java>
-                            </tasks>
+                            </target>
                         </configuration>
                     </execution>
                 </executions>
