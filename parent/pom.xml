@@ -526,7 +526,7 @@
         <pax.logging.log4j2.version>2.1.0-wso2v4</pax.logging.log4j2.version>
 
         <!--<version.opensaml2>2.4.1.wso2v1</version.opensaml2>-->
-        <version.compass>2.0.1.wso2v2</version.compass>
+        <version.compass>4.3.0.wso2v1</version.compass>
 
         <version.xercesImpl>2.12.2.wso2v1</version.xercesImpl>
         <version.xalan>2.7.2.wso2v2</version.xalan>
