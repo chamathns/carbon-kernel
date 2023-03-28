@@ -238,6 +238,9 @@
                             org.owasp.encoder.*;version="${owasp.encoder.wso2.imp.pkg.version}",
                             *;resolution:=optional
                         </Import-Package>
+                        <Provide-Capability>
+                            osgi.contract;osgi.contract=JavaJSP;version:Version=2.3.0
+                        </Provide-Capability>
                         <DynamicImport-Package>*</DynamicImport-Package>
                         <Bundle-ClassPath>.</Bundle-ClassPath>
                         <Carbon-Component>UIBundle</Carbon-Component>
