@@ -226,11 +226,11 @@
                             org.apache.axis2.*; version="${imp.pkg.version.axis2}",
                             org.apache.axiom.*; version="${imp.pkg.version.axiom}",
                             org.wso2.carbon.core.*,
-<!--                            javax.xml.stream.*; version="0.0.0",-->
-<!--                            javax.servlet; version="${imp.pkg.version.javax.servlet}",-->
-<!--                            javax.servlet.http; version="${imp.pkg.version.javax.servlet}",-->
-<!--                            javax.servlet.jsp; version="${imp.pkg.version.javax.servlet.jsp}"-->
-<!--                            javax.servlet.jsp.tagext; version="${imp.pkg.version.javax.servlet.jsp}",-->
+                            javax.xml.stream.*; version="0.0.0",
+                            javax.servlet; version="${imp.pkg.version.javax.servlet}",
+                            javax.servlet.http; version="${imp.pkg.version.javax.servlet}",
+                            javax.servlet.jsp; version="${imp.pkg.version.javax.servlet.jsp}"
+                            javax.servlet.jsp.tagext; version="${imp.pkg.version.javax.servlet.jsp}",
                             org.eclipse.equinox.http.helper,
                             org.apache.tiles.*;version="2.0.5",
                             org.wso2.carbon.registry.core.service,
@@ -238,9 +238,6 @@
                             org.owasp.encoder.*;version="${owasp.encoder.wso2.imp.pkg.version}",
                             *;resolution:=optional
                         </Import-Package>
-                        <Provide-Capability>
-                            osgi.contract;osgi.contract=JavaJSP;version:Version=2.3.0
-                        </Provide-Capability>
                         <DynamicImport-Package>*</DynamicImport-Package>
                         <Bundle-ClassPath>.</Bundle-ClassPath>
                         <Carbon-Component>UIBundle</Carbon-Component>

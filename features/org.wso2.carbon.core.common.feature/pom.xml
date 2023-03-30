@@ -167,13 +167,17 @@
                                     org.wso2.carbon.crypto:org.wso2.carbon.crypto.provider:${carbon.crypto.version}
                                 </bundleDef>
                                 <bundleDef>org.wso2.orbit.sun.xml.bind:jaxb:${version.org.wso2.orbit.javax.xml.bind.jaxb}</bundleDef>
-                                <bundleDef>com.sun.activation:javax.activation:1.2.0</bundleDef>
+<!--                                <bundleDef>org.wso2.orbit.javax.activation:activation:1.1.1.wso2v4</bundleDef>-->
+<!--                                <bundleDef>com.sun.activation:javax.activation:1.2.0</bundleDef>-->
 <!--                                <bundleDef>com.sun.xml.bind:jaxb-impl:4.0.0</bundleDef>-->
 <!--                                <bundleDef>jakarta.xml.bind:jakarta.xml.bind-api:4.0.0</bundleDef>-->
-                                <bundleDef>javax.xml.soap:javax.xml.soap-api:1.4.0</bundleDef>
-                                <bundleDef>jakarta.servlet.jsp:jakarta.servlet.jsp-api:3.1.1</bundleDef>
-                                <bundleDef>jakarta.el:jakarta.el-api:5.0.1</bundleDef>
-                                <bundleDef>jakarta.servlet:jakarta.servlet-api:6.0.0</bundleDef>
+<!--                                <bundleDef>javax.xml.soap:javax.xml.soap-api:1.4.0</bundleDef>-->
+<!--                                <bundleDef>jakarta.servlet.jsp:jakarta.servlet.jsp-api:3.1.1</bundleDef>-->
+<!--                                <bundleDef>jakarta.el:jakarta.el-api:5.0.1</bundleDef>-->
+<!--                                <bundleDef>jakarta.servlet:jakarta.servlet-api:6.0.0</bundleDef>-->
+<!--                                <bundleDef>jakarta.xml.ws:jakarta.xml.ws-api:4.0.0</bundleDef>-->
+<!--                                <bundleDef>com.sun.xml.ws:jaxws-rt:4.0.0</bundleDef>-->
+<!--                                <bundleDef>jakarta.xml.soap:jakarta.xml.soap-api:3.0.0</bundleDef>-->
 <!--                                <bundleDef>javax.servlet:javax.servlet-api:3.0.1</bundleDef>-->
 <!--                                <bundleDef>javax.servlet:jsp-api:2.0</bundleDef>-->
 <!--                                <bundleDef>jakarta.activation:jakarta.activation-api:2.1.0</bundleDef>-->
