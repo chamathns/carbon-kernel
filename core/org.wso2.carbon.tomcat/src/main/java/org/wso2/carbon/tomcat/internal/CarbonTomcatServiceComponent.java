@@ -19,13 +19,54 @@ package org.wso2.carbon.tomcat.internal;
 
 import javax.servlet.ServletContainerInitializer;
 
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
-import org.osgi.service.component.annotations.ReferenceCardinality;
-import org.osgi.service.component.annotations.ReferencePolicy;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceRegistration;
+import org.osgi.service.component.ComponentContext;
+import org.osgi.service.component.annotations.*;
+import org.wso2.carbon.registry.api.RegistryService;
+import org.wso2.carbon.tomcat.api.CarbonTomcatService;
 
 @Component(name = "org.wso2.carbon.tomcat.internal.CarbonTomcatServiceComponent", immediate = true)
 public class CarbonTomcatServiceComponent {
+
+    private static Log log = LogFactory.getLog(CarbonTomcatServiceComponent.class);
+    private ServerManager serverManager;
+    private ServiceRegistration serviceRegistration;
+
+    @Activate
+    protected void activate(ComponentContext ctxt) {
+
+        try {
+            BundleContext bundleContext = ctxt.getBundleContext();
+            this.serverManager = new ServerManager();
+            serverManager.init();
+            serverManager.start();
+            serviceRegistration = bundleContext.registerService(CarbonTomcatService.class.getName(), serverManager.getTomcatInstance(), null);
+        } catch (Throwable t) {
+            log.fatal("Error while starting server " + t.getMessage(), t);
+            //do not throw because framework will keep trying. catching throwable is a bad thing, but
+            //looks like we have no other option.
+        }
+    }
+
+
+    @Reference(name = "registry.service.provider", cardinality = ReferenceCardinality.MANDATORY, policy = ReferencePolicy.DYNAMIC,
+            unbind = "unsetRegistryService")
+    protected void setRegistryService(RegistryService registryService) {
+//        CarbonRealmServiceHolder.setRegistryService(registryService);
+        if (log.isDebugEnabled()) {
+            log.debug(registryService + "is being set");
+        }
+    }
+
+    protected void unsetRegistryService(RegistryService registryService) {
+//        CarbonRealmServiceHolder.setRegistryService(null);
+        if (log.isDebugEnabled()) {
+            log.debug(registryService + "is being unset");
+        }
+    }
 
     @Reference(name = "sci", cardinality = ReferenceCardinality.MULTIPLE, policy = ReferencePolicy.DYNAMIC, 
             unbind = "unsetServletContainerInitializer")

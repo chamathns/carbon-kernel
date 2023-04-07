@@ -44,8 +44,8 @@
                             !org.apache.lucene.*,
                             !javax.servlet,
                             !javax.servlet.http,
-                            org.wso2.carbon.registry.core.*;version=1.0.1,
-                            org.wso2.carbon.registry.synchronization.*;version=1.0.1,
+                            org.wso2.carbon.registry.core.*;version="${project.version}",
+                            org.wso2.carbon.registry.synchronization.*;version="${project.version}",
                         </Export-Package>
                         <Import-Package>
                             org.apache.commons.logging.*; version="${import.package.version.commons.logging}",

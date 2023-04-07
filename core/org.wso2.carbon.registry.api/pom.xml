@@ -44,8 +44,12 @@
                             !org.apache.lucene.*,
                             !javax.servlet,
                             !javax.servlet.http,
-                            org.wso2.carbon.registry.api.*;version=1.0.1,
+                            org.wso2.carbon.registry.api.*;version="${project.version}"
                         </Export-Package>
+                        <Import-Package>
+                            *;resolution:=optional
+                        </Import-Package>
+                        <DynamicImport-Package>*</DynamicImport-Package>
                         <Provide-Capability>
                             osgi.service;objectClass=org.wso2.carbon.registry.api.RegistryService
                         </Provide-Capability>

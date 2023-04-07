@@ -85,6 +85,15 @@
             <artifactId>org.osgi.compendium</artifactId>
             <scope>provided</scope>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.wso2.carbon</groupId>-->
+<!--            <artifactId>org.wso2.carbon.tomcat.ext</artifactId>-->
+<!--            <version>${project.version}</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.wso2.carbon</groupId>
+            <artifactId>org.wso2.carbon.utils</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -97,28 +106,35 @@
                     <instructions>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
-                        <Bundle-Activator>org.wso2.carbon.tomcat.internal.TomcatBundleActivator</Bundle-Activator>
+<!--                        <Bundle-Activator>org.wso2.carbon.tomcat.internal.TomcatBundleActivator</Bundle-Activator>-->
                         <Private-Package>
-                            org.wso2.carbon.tomcat.internal,
-                            org.wso2.carbon.tomcat.jndi
+                            org.wso2.carbon.tomcat.internal
+<!--                            org.wso2.carbon.tomcat.jndi-->
                         </Private-Package>
                         <Export-Package>
                             !org.wso2.carbon.tomcat.internal.*,
+                            !org.wso2.carbon.tomcat.ext.*,
                             org.wso2.carbon.tomcat.*,
+                            org.wso2.carbon.tomcat.jndi.*;version="${project.version}",
                             org.wso2.carbon.tomcat.api.*,
-                            org.wso2.carbon.tomcat.server.*,
-                            org.wso2.carbon.tomcat.ext.valves.*,
-                            org.wso2.carbon.tomcat.ext.service.*,
-                            org.wso2.carbon.tomcat.ext.realms.*
+                            org.wso2.carbon.tomcat.server.*
+<!--                            org.wso2.carbon.tomcat.ext.valves.*,-->
+<!--                            org.wso2.carbon.tomcat.ext.service.*,-->
+<!--                            org.wso2.carbon.tomcat.ext.realms.*-->
                         </Export-Package>
                         <Import-Package>
+                            org.wso2.carbon.tomcat.ext.*;version="${project.version}",
                             org.apache.tomcat.*;version="[9.0.0,10.0.0)",
                             org.apache.catalina.*;version="[9.0.0,10.0.0)",
                             org.apache.naming.*;version="[9.0.0,10.0.0)",
-                            org.wso2.carbon.tomcat.ext.*;version="[4.9.0,5.0.0)",
+                            javax.servlet;version="${imp.pkg.version.javax.servlet}",
+<!--                            org.wso2.carbon.utils;version="${project.version}",-->
                             *;resolution:=optional
                         </Import-Package>
-                        <DynamicImport-Package>*</DynamicImport-Package>
+                        <DynamicImport-Package>
+                            org.wso2.carbon.tomcat.ext.valves.*,
+                            org.wso2.carbon.utils;version="${project.version}"
+                        </DynamicImport-Package>
                         <Provide-Capability>
                             osgi.service;objectClass=org.wso2.carbon.tomcat.api.CarbonTomcatService
                         </Provide-Capability>

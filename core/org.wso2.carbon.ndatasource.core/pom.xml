@@ -96,6 +96,7 @@
                             javax.xml.bind;version="[0.0.0, 1.0.0)",
                             javax.xml.bind.annotation;version="[0.0.0, 1.0.0)",
                             org.wso2.carbon.ndatasource.rdbms,
+                            javax.activation;version="0.0.0",
                             *;resolution:=optional
                         </Import-Package>
                         <DynamicImport-Package>*</DynamicImport-Package>

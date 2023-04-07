@@ -248,7 +248,7 @@
                         <Export-Package>
                             !org.wso2.carbon.utils.resolver,
                             org.wso2.carbon,
-                            org.wso2.carbon.utils.*,
+                            org.wso2.carbon.utils.*;version="${project.version}",
                             org.wso2.carbon.context,
                             !org.wso2.carbon.context.internal
                         </Export-Package>

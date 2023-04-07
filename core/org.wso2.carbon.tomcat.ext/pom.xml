@@ -133,11 +133,12 @@
                         <Private-Package>org.wso2.carbon.tomcat.ext.internal</Private-Package>
                         <Export-Package>
                             !org.wso2.carbon.tomcat.ext.internal.*,
-                            org.wso2.carbon.tomcat.ext.*;version="4.9.1",
+                            org.wso2.carbon.tomcat.ext.*;version="${project.version}"
                         </Export-Package>
                         <Import-Package>
                             org.apache.tomcat.*
                             org.apache.commons.logging,
+                            org.wso2.carbon.registry.core.*;version="${project.version}",
                             org.slf4j,
                             javax.servlet,
                             javax.servlet.http,

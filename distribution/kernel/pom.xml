@@ -145,11 +145,14 @@
 <!--            <groupId>com.sun.activation</groupId>-->
 <!--            <artifactId>javax.activation</artifactId>-->
 <!--        </dependency>-->
-
         <dependency>
-            <groupId>javax.activation</groupId>
+            <groupId>org.wso2.orbit.javax.activation</groupId>
             <artifactId>activation</artifactId>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>javax.activation</groupId>-->
+<!--            <artifactId>activation</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>javax.annotation</groupId>
             <artifactId>javax.annotation-api</artifactId>

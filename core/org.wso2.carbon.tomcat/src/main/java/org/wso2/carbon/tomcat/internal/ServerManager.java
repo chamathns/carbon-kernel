@@ -58,6 +58,7 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+//import org.wso2.carbon.tomcat.ext.valves.RequestEncodingValve;
 
 import static org.wso2.carbon.utils.CarbonUtils.getSecureTransformerFactory;
 
@@ -74,6 +75,8 @@ public class ServerManager {
     private static final String SVNS = "svns";
     private static final String CARBON_URL_CONTEXT_FACTORY_PKG_PREFIX = "org.wso2.carbon.tomcat.jndi";
     private static final int ENTITY_EXPANSION_LIMIT = 0;
+
+//    private static RequestEncodingValve requestEncodingValve = new RequestEncodingValve();
 
 
     /**

@@ -45,8 +45,11 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
                         <Export-Package>
-                            org.wso2.carbon.ndatasource.common.*
+                            org.wso2.carbon.ndatasource.common.*,
                         </Export-Package>
+                        <Import-Package>
+                            *;resolution:=optional
+                        </Import-Package>
                         <DynamicImport-Package>*</DynamicImport-Package>
                     </instructions>
                 </configuration>

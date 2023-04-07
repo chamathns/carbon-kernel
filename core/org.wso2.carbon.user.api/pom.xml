@@ -48,7 +48,7 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
                         <Export-Package>
-                            org.wso2.carbon.user.api.*;version=1.0.1,
+                            org.wso2.carbon.user.api;version="${project.version}",
                         </Export-Package>
                         <Import-Package>
                             org.wso2.carbon.base.*

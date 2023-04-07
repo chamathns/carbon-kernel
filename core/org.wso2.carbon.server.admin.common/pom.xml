@@ -55,6 +55,10 @@
                         <Export-Package>
                             org.wso2.carbon.server.admin.common.*
                         </Export-Package>
+                        <Import-Package>
+                            *;resolution:=optional
+                        </Import-Package>
+                        <DynamicImport-Package>*</DynamicImport-Package>
                     </instructions>
                 </configuration>
             </plugin>

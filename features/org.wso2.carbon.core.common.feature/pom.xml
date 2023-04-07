@@ -167,6 +167,7 @@
                                     org.wso2.carbon.crypto:org.wso2.carbon.crypto.provider:${carbon.crypto.version}
                                 </bundleDef>
                                 <bundleDef>org.wso2.orbit.sun.xml.bind:jaxb:${version.org.wso2.orbit.javax.xml.bind.jaxb}</bundleDef>
+                                <bundleDef>org.wso2.orbit.javax.activation:activation:1.1.1.wso2v4</bundleDef>
 <!--                                <bundleDef>org.wso2.orbit.javax.activation:activation:1.1.1.wso2v4</bundleDef>-->
 <!--                                <bundleDef>com.sun.activation:javax.activation:1.2.0</bundleDef>-->
 <!--                                <bundleDef>com.sun.xml.bind:jaxb-impl:4.0.0</bundleDef>-->
