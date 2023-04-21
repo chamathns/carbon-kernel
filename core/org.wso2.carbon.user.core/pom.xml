@@ -196,16 +196,16 @@
                             org.apache.commons.logging.*; version="${import.package.version.commons.logging}",
                             org.apache.commons.lang.*;
                             javax.naming.*,
-                            org.wso2.carbon.tomcat.jndi.*;version="${project.version}",
                             javax.xml.stream.*; version="0.0.0",
                             javax.xml.namespace; version=0.0.0,
+                            org.wso2.carbon.tomcat.*,
                             *;resolution:=optional
                         </Import-Package>
                         <Provide-Capability>
                             osgi.service;objectClass=org.wso2.carbon.user.core.service.RealmService
                         </Provide-Capability>
                         <DynamicImport-Package>
-<!--                            org.wso2.carbon.tomcat.jndi.*;version="${project.version}",-->
+<!--                            org.wso2.carbon.tomcat.jndi.*;version="4.9.1",-->
                             *
                         </DynamicImport-Package>
                     </instructions>

@@ -42,7 +42,7 @@ import java.util.Collection;
  * ServerConfiguration object is not available to this bundle.
  * Therefore we read properties but do not keep a reference to it.
  */
-public class Activator extends BundleCheckActivator {
+public class    Activator extends BundleCheckActivator {
     private static final Log log = LogFactory.getLog(Activator.class);
 
     public void startDeploy(BundleContext bundleContext) throws Exception {

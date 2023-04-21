@@ -140,7 +140,7 @@
                             org.apache.commons.logging,
                             org.wso2.carbon.registry.core.*;version="${project.version}",
                             org.slf4j,
-                            javax.servlet,
+                            javax.servlet;version="[2.6.0,5.0)",
                             javax.servlet.http,
                             com.google.gson,
                             org.apache.catalina.valves.*,

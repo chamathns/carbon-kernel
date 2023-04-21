@@ -324,7 +324,7 @@
         <version.equinox.launcher.gtk.linux.x86>1.1.800</version.equinox.launcher.gtk.linux.x86>
         <version.equinox.core.runtime>3.26.100</version.equinox.core.runtime>
         <version.equinox.osgi.services>3.11.100</version.equinox.osgi.services>
-        <version.equinox.osgi>3.18.200</version.equinox.osgi>
+        <version.equinox.osgi>3.18.300</version.equinox.osgi>
         <version.equinox.core.contenttype>3.8.200</version.equinox.core.contenttype>
         <version.equinox.core.expressions>3.8.200</version.equinox.core.expressions>
         <version.equinox.core.jobs>3.13.200</version.equinox.core.jobs>
@@ -1081,6 +1081,16 @@
                 <artifactId>jaxb-impl</artifactId>
                 <version>4.0.0</version>
                 <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-core</artifactId>
+                <version>4.0.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>3.29.2-GA</version>
             </dependency>
             <dependency>
                 <groupId>geronimo</groupId>
