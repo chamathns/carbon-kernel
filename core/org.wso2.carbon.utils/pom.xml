@@ -266,6 +266,7 @@
                             org.apache.axiom.*; version="${imp.pkg.version.axiom}",
                             javax.xml.stream.*; version="0.0.0",
                             org.bouncycastle.*; version="${imp.pkg.version.bcp}",
+                            org.wso2.carbon.tomcat.jndi;version="4.9.1",
                             *;resolution:=optional
                         </Import-Package>
                         <Provide-Capability>

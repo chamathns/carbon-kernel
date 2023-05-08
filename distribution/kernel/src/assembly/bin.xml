@@ -163,6 +163,10 @@
                 <include>org.wso2.orbit.sun.xml.ws:jaxws-ri:jar</include>
                 <include>com.sun.xml.messaging.saaj:saaj-impl:jar</include>
                 <include>org.jvnet.staxex:stax-ex:jar</include>
+                <include>org.javassist:javassist</include>
+                <include>jakarta.activation:jakarta.activation-api</include>
+                <include>jakarta.xml.bind:jakarta.xml.bind-api</include>
+                <include>com.sun.xml.bind:jaxb-core</include>
             </includes>
         </dependencySet>
         <dependencySet>

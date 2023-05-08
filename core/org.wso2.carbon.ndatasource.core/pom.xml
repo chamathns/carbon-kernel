@@ -93,16 +93,17 @@
                         <Import-Package>
                             org.apache.axiom.*; version="${imp.pkg.version.axiom}",
                             javax.xml.parsers;version=0.0.0,
-                            javax.xml.bind;version="[0.0.0, 1.0.0)",
+                            com.sun.xml.bind;version="0.0.0",
                             javax.xml.bind.annotation;version="[0.0.0, 1.0.0)",
                             org.wso2.carbon.ndatasource.rdbms,
                             org.wso2.carbon.tomcat.jndi.*;version="4.9.1"
                             javax.activation;version="0.0.0",
                             *;resolution:=optional
                         </Import-Package>
-<!--                        <DynamicImport-Package>-->
+                        <DynamicImport-Package>
 <!--                            org.wso2.carbon.tomcat.jndi.*;version="4.9.1",-->
-<!--                        </DynamicImport-Package>-->
+                            *
+                        </DynamicImport-Package>
                         <DeployBefore>UserCore</DeployBefore>
                     </instructions>
                 </configuration>

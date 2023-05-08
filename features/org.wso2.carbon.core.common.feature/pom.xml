@@ -172,7 +172,7 @@
 <!--                                <bundleDef>com.sun.activation:javax.activation:1.2.0</bundleDef>-->
 <!--                                <bundleDef>com.sun.xml.bind:jaxb-impl:4.0.0</bundleDef>-->
 <!--                                <bundleDef>jakarta.xml.bind:jakarta.xml.bind-api:4.0.0</bundleDef>-->
-<!--                                <bundleDef>javax.xml.soap:javax.xml.soap-api:1.4.0</bundleDef>-->
+                                <bundleDef>javax.xml.soap:javax.xml.soap-api:1.4.0</bundleDef>
 <!--                                <bundleDef>jakarta.servlet.jsp:jakarta.servlet.jsp-api:3.1.1</bundleDef>-->
 <!--                                <bundleDef>jakarta.el:jakarta.el-api:5.0.1</bundleDef>-->
 <!--                                <bundleDef>jakarta.servlet:jakarta.servlet-api:6.0.0</bundleDef>-->
